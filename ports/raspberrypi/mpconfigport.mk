@@ -88,16 +88,16 @@ FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_MPU6050
 FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_NeoPixel
 
 # https://github.com/buildwithpiper/circuitpython-range-finder-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Distance_sensor
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-range-finder-library
 
 # https://github.com/buildwithpiper/circuitpython-motor-module-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Motor_Module
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-motor-module-library
 
 # https://github.com/buildwithpiper/circuitpython-lightshow-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_LightShow
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-lightshow-library
 
 # https://github.com/buildwithpiper/circuitpython-heart-sensor-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Heart_Sensor
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-heart-sensor-library
 
 # https://github.com/buildwithpiper/circuitpython-piper-make-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Blockly_Library
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-piper-make-library

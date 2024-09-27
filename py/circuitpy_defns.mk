@@ -306,6 +306,9 @@ endif
 ifeq ($(CIRCUITPY_PEW),1)
 SRC_PATTERNS += _pew/%
 endif
+ifeq ($(CIRCUITPY_LIGHTSHOW),1)
+SRC_PATTERNS += _lightshow/%
+endif
 ifeq ($(CIRCUITPY_PIXELBUF),1)
 SRC_PATTERNS += adafruit_pixelbuf/%
 endif
@@ -456,6 +459,8 @@ SRC_COMMON_HAL_ALL = \
 	_bleio/__init__.c \
 	_pew/PewPew.c \
 	_pew/__init__.c \
+	_lightshow/LIGHTSHOW.c \
+	_lightshow/__init__.c \
 	alarm/SleepMemory.c \
 	alarm/__init__.c \
 	alarm/pin/PinAlarm.c \

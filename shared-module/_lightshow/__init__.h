@@ -30,4 +30,11 @@
 
 void lightshow_tick(void);
 
+#if defined(PICO_BOARD) || defined(__RP2040__)
+void write_four_bytes_to_spi(uint _cs, spi_inst_t *_spi, uint8_t *bytes_out);
+#else
+void write_four_bytes_to_spi(digitalio_digitalinout_obj_t *_cs, busio_spi_obj_t *_spi, uint8_t *bytes_out);
+#endif
+
+
 #endif  // MICROPY_INCLUDED_LIGHTSHOW_H

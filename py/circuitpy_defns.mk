@@ -609,6 +609,7 @@ SRC_SHARED_MODULE_ALL = \
 	_bleio/ScanEntry.c \
 	_bleio/ScanResults.c \
 	_eve/__init__.c \
+	_lightshow/LIGHTSHOW.c \
 	_lightshow/__init__.c \
 	adafruit_pixelbuf/PixelBuf.c \
 	adafruit_pixelbuf/__init__.c \

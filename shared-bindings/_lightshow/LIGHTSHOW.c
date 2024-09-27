@@ -34,7 +34,7 @@
 #include "shared-bindings/util.h"
 #include "LIGHTSHOW.h"
 #include "shared-module/_lightshow/LIGHTSHOW.h"
-#include "supervisor/shared/translate.h"
+//#include "supervisor/shared/translate.h"
 
 //| class LIGHTSHOW: TODO update this test TODO
 //|     """This is an internal module to be used by the ``lightshow.py`` library from

@@ -32,10 +32,15 @@
 #include <stdbool.h>
 
 #if defined(PICO_BOARD) || defined(__RP2040__)
+
+#define HAS_GPIO_COPROCESSOR  0   // resolve a warning when building for the RP2040
+
 #include "ports/raspberrypi/sdk/src/rp2_common/hardware_spi/include/hardware/spi.h"
 #include "ports/raspberrypi/sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h"
+
 #else
 #include "shared-bindings/digitalio/DigitalInOut.h"
+
 #endif
 
 #include "py/mpstate.h"

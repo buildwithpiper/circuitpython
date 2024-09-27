@@ -459,8 +459,6 @@ SRC_COMMON_HAL_ALL = \
 	_bleio/__init__.c \
 	_pew/PewPew.c \
 	_pew/__init__.c \
-	_lightshow/LIGHTSHOW.c \
-	_lightshow/__init__.c \
 	alarm/SleepMemory.c \
 	alarm/__init__.c \
 	alarm/pin/PinAlarm.c \
@@ -568,6 +566,7 @@ $(filter $(SRC_PATTERNS), \
 	_bleio/Attribute.c \
 	_bleio/ScanEntry.c \
 	_eve/__init__.c \
+	_lightshow/__init__.c \
 	__future__/__init__.c \
 	camera/ImageFormat.c \
 	canio/Match.c \
@@ -609,6 +608,7 @@ SRC_SHARED_MODULE_ALL = \
 	_bleio/ScanEntry.c \
 	_bleio/ScanResults.c \
 	_eve/__init__.c \
+	_lightshow/__init__.c \
 	adafruit_pixelbuf/PixelBuf.c \
 	adafruit_pixelbuf/__init__.c \
 	_pixelmap/PixelMap.c \

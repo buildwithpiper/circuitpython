@@ -58,7 +58,7 @@
 //|         be displayed on the matrix."""
 //|         ...
 //|
-STATIC mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
+static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
     const mp_obj_t *pos_args, mp_map_t *kw_args) {
     mp_arg_check_num(n_args, kw_args, 3, 3, true);
     enum { ARG_spi, ARG_chip_select, ARG_buffer };
@@ -114,12 +114,14 @@ STATIC mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
     return MP_OBJ_FROM_PTR(lightshow);
 }
 
-STATIC const mp_rom_map_elem_t lightshow_locals_dict_table[] = {
+static const mp_rom_map_elem_t lightshow_locals_dict_table[] = {
 };
-STATIC MP_DEFINE_CONST_DICT(lightshow_locals_dict, lightshow_locals_dict_table);
+static MP_DEFINE_CONST_DICT(lightshow_locals_dict, lightshow_locals_dict_table);
 const mp_obj_type_t lightshow_type = {
     { &mp_type_type },
     .name = MP_QSTR_LIGHTSHOW,
     .make_new = lightshow_make_new,
     .locals_dict = (mp_obj_dict_t *)&lightshow_locals_dict,
 };
+
+MP_REGISTER_ROOT_POINTER(mp_obj_t lightshow_singleton);

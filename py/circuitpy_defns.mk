@@ -567,6 +567,7 @@ $(filter $(SRC_PATTERNS), \
 	_bleio/ScanEntry.c \
 	_eve/__init__.c \
 	_lightshow/__init__.c \
+	_lightshow/LIGHTSHOW.c \
 	__future__/__init__.c \
 	camera/ImageFormat.c \
 	canio/Match.c \

@@ -57,9 +57,9 @@
 //|         be displayed on the matrix."""
 //|         ...
 //|
-static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
-    const mp_obj_t *pos_args, mp_map_t *kw_args) {
-    mp_arg_check_num(n_args, kw_args, 3, 3, true);
+
+static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
+    mp_arg_check_num(n_args, n_kw, 3, 3, true);
     enum { ARG_spi, ARG_chip_select, ARG_buffer };
     static const mp_arg_t allowed_args[] = {
         { MP_QSTR_spi, MP_ARG_OBJ | MP_ARG_REQUIRED },
@@ -67,7 +67,7 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
         { MP_QSTR_buffer, MP_ARG_OBJ | MP_ARG_REQUIRED },
     };
     mp_arg_val_t args[MP_ARRAY_SIZE(allowed_args)];
-    mp_arg_parse_all(n_args, pos_args, kw_args, MP_ARRAY_SIZE(allowed_args),
+    mp_arg_parse_all_kw_array(n_args, n_kw, all_args, MP_ARRAY_SIZE(allowed_args),
         allowed_args, args);
 
     if (!mp_obj_is_type(args[ARG_spi].u_obj,
@@ -98,10 +98,16 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
     }
 
     lightshow_obj_t *lightshow = MP_STATE_VM(lightshow_singleton);
+    /*
     if (!lightshow) {
         lightshow = m_new_obj(lightshow_obj_t);
         lightshow->base.type = &lightshow_type;
         lightshow = gc_make_long_lived(lightshow);
+        MP_STATE_VM(lightshow_singleton) = lightshow;
+    }
+    */
+    if (!lightshow) {
+        lightshow = mp_obj_malloc(pew_obj_t, &lightshow_type);
         MP_STATE_VM(lightshow_singleton) = lightshow;
     }
 
@@ -116,11 +122,13 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
 static const mp_rom_map_elem_t lightshow_locals_dict_table[] = {
 };
 static MP_DEFINE_CONST_DICT(lightshow_locals_dict, lightshow_locals_dict_table);
-const mp_obj_type_t lightshow_type = {
-    { &mp_type_type },
-    .name = MP_QSTR_LIGHTSHOW,
-    .make_new = lightshow_make_new,
-    .locals_dict = (mp_obj_dict_t *)&lightshow_locals_dict,
-};
+
+MP_DEFINE_CONST_OBJ_TYPE(
+    lightshow_type,
+    MP_QSTR_LIGHTSHOW,
+    MP_TYPE_FLAG_NONE,
+    make_new, lightshow_make_new,
+    locals_dict, &lightshow_locals_dict
+    );
 
 MP_REGISTER_ROOT_POINTER(mp_obj_t lightshow_singleton);

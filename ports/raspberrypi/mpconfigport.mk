@@ -65,6 +65,8 @@ CIRCUITPY_MESSAGE_COMPRESSION_LEVEL ?= 1
 CIRCUITPY_SSL_MBEDTLS = 1
 
 
+# Enable lightshow module
+CIRCUITPY_LIGHTSHOW = 1
 
 # https://github.com/adafruit/Adafruit_CircuitPython_Register
 FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_Register

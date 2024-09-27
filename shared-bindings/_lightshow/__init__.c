@@ -33,11 +33,11 @@
 
 //| """LED matrix driver"""
 //|
-STATIC const mp_rom_map_elem_t lightshow_module_globals_table[] = {
+static const mp_rom_map_elem_t lightshow_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR__lightshow) },
     { MP_OBJ_NEW_QSTR(MP_QSTR_LIGHTSHOW),  MP_ROM_PTR(&lightshow_type)},
 };
-STATIC MP_DEFINE_CONST_DICT(lightshow_module_globals,
+static MP_DEFINE_CONST_DICT(lightshow_module_globals,
     lightshow_module_globals_table);
 
 const mp_obj_module_t lightshow_module = {

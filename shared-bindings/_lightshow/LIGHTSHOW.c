@@ -34,7 +34,6 @@
 #include "shared-bindings/util.h"
 #include "LIGHTSHOW.h"
 #include "shared-module/_lightshow/LIGHTSHOW.h"
-//#include "supervisor/shared/translate.h"
 
 //| class LIGHTSHOW: TODO update this test TODO
 //|     """This is an internal module to be used by the ``lightshow.py`` library from
@@ -73,7 +72,7 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
 
     if (!mp_obj_is_type(args[ARG_spi].u_obj,
         &busio_spi_type)) {
-        mp_raise_TypeError(translate("spi must be busio.SPI"));
+        mp_raise_TypeError(MP_ERROR_TEXT("spi must be busio.SPI"));
     }
     busio_spi_obj_t *spi = MP_OBJ_TO_PTR(
         args[ARG_spi].u_obj);
@@ -82,7 +81,7 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
     }
     if (!mp_obj_is_type(args[ARG_chip_select].u_obj,
         &digitalio_digitalinout_type)) {
-        mp_raise_TypeError(translate("chip_Select must be digitalio.DigitalInOut"));
+        mp_raise_TypeError(MP_ERROR_TEXT("chip_Select must be digitalio.DigitalInOut"));
     }
 
     digitalio_digitalinout_obj_t *chip_select = MP_OBJ_TO_PTR(
@@ -95,7 +94,7 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args,
     mp_get_buffer_raise(args[ARG_buffer].u_obj, &bufinfo, MP_BUFFER_READ);
 
     if (bufinfo.len != 64) {
-        mp_raise_ValueError(translate("Incorrect buffer size"));
+        mp_raise_ValueError(MP_ERROR_TEXT("Incorrect buffer size"));
     }
 
     lightshow_obj_t *lightshow = MP_STATE_VM(lightshow_singleton);

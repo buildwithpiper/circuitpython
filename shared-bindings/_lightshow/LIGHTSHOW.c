@@ -58,7 +58,7 @@
 //|         ...
 //|
 
-static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args) {
+static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *all_args) {
     mp_arg_check_num(n_args, n_kw, 3, 3, true);
     enum { ARG_spi, ARG_chip_select, ARG_buffer };
     static const mp_arg_t allowed_args[] = {
@@ -107,7 +107,7 @@ static mp_obj_t lightshow_make_new(const mp_obj_type_t *type, size_t n_args, siz
     }
     */
     if (!lightshow) {
-        lightshow = mp_obj_malloc(pew_obj_t, &lightshow_type);
+        lightshow = mp_obj_malloc(lightshow_obj_t, &lightshow_type);
         MP_STATE_VM(lightshow_singleton) = lightshow;
     }
 

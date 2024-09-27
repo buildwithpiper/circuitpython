@@ -28,6 +28,8 @@
 #ifndef MICROPY_INCLUDED_LIGHTSHOW_INIT_H
 #define MICROPY_INCLUDED_LIGHTSHOW_INIT_H
 
+#include "ports/raspberrypi/sdk/src/rp2_common/hardware_spi/include/hardware/spi.h"
+
 void lightshow_tick(void);
 
 #if defined(PICO_BOARD) || defined(__RP2040__)

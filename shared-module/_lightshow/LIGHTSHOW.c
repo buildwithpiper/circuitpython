@@ -49,8 +49,9 @@
 #include "pico/multicore.h"
 #endif
 
+#if defined(SAMD21) || defined(SAMD51)
 static uint8_t lightshow_tc_index = 0xff;
-
+#endif
 
 void lightshow_interrupt_handler(uint8_t index) {
     #if defined(SAMD21) || defined(SAMD51)

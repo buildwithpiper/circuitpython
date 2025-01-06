@@ -138,6 +138,9 @@ FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_MPU6050
 # https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel
 FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_NeoPixel
 
+# https://github.com/adafruit/Adafruit_CircuitPython_PixelBuf
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_PixelBuf
+
 # https://github.com/buildwithpiper/circuitpython-range-finder-library.git
 FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-range-finder-library
 

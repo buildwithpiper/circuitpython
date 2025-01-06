@@ -111,3 +111,38 @@ ifeq ($(INTERNAL_FLASH_FILESYSTEM),1)
 endif
 endif
 endif
+
+
+
+# https://github.com/adafruit/Adafruit_CircuitPython_Register
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_Register
+
+# https://github.com/adafruit/Adafruit_CircuitPython_HID
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_HID
+
+# https://github.com/adafruit/Adafruit_CircuitPython_Motor
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_Motor
+
+# https://github.com/adafruit/Adafruit_CircuitPython_TCS34725
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_TCS34725
+
+# https://github.com/adafruit/Adafruit_CircuitPython_MCP9808
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_MCP9808
+
+# https://github.com/adafruit/Adafruit_CircuitPython_MPU6050
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_MPU6050
+
+# https://github.com/adafruit/Adafruit_CircuitPython_NeoPixel
+FROZEN_MPY_DIRS += $(TOP)/frozen/Adafruit_CircuitPython_NeoPixel
+
+# https://github.com/buildwithpiper/circuitpython-range-finder-library.git
+FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Distance_sensor
+
+# https://github.com/buildwithpiper/circuitpython-motor-module-library.git
+FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Motor_Module
+
+# https://github.com/buildwithpiper/circuitpython-heart-sensor-library.git
+FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Heart_Sensor
+
+# https://github.com/buildwithpiper/circuitpython-piper-make-library.git
+FROZEN_MPY_DIRS += $(TOP)/frozen/Piper_Blockly_Library

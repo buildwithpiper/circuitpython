@@ -142,7 +142,7 @@ FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-range-finder-library
 FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-motor-module-library
 
 # https://github.com/buildwithpiper/circuitpython-heart-sensor-library.git
-FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-heart-sensor-library
+#FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-heart-sensor-library     # remove for now - numpy/ulab isn't available on the micro:bit
 
 # https://github.com/buildwithpiper/circuitpython-piper-make-library.git
 FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-piper-make-library

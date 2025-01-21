@@ -107,11 +107,12 @@ CIRCUITPY_LTO = 1
 CIRCUITPY_LTO_PARTITION = one
 ifeq ($(INTERNAL_FLASH_FILESYSTEM),1)
   CIRCUITPY_FULL_BUILD ?= 0
-  CIRCUITPY_PULSEIO ?= 1
+  #CIRCUITPY_PULSEIO ?= 1
 endif
 endif
 endif
 
+CIRCUITPY_PULSEIO = 1  #force it
 
 
 # https://github.com/adafruit/Adafruit_CircuitPython_Register

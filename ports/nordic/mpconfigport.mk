@@ -112,7 +112,9 @@ endif
 endif
 endif
 
-CIRCUITPY_PULSEIO = 1  #force it
+
+#force it
+CIRCUITPY_PULSEIO = 1
 
 
 # https://github.com/adafruit/Adafruit_CircuitPython_Register

@@ -406,3 +406,30 @@
 [submodule "frozen/Adafruit_CircuitPython_Wiznet5k"]
 	path = frozen/Adafruit_CircuitPython_Wiznet5k
 	url = https://github.com/adafruit/Adafruit_CircuitPython_Wiznet5k
+[submodule "frozen/Adafruit_CircuitPython_TCS34725"]
+	path = frozen/Adafruit_CircuitPython_TCS34725
+	url = https://github.com/adafruit/Adafruit_CircuitPython_TCS34725
+[submodule "frozen/Adafruit_CircuitPython_MCP9808"]
+	path = frozen/Adafruit_CircuitPython_MCP9808
+	url = https://github.com/adafruit/Adafruit_CircuitPython_MCP9808
+[submodule "frozen/circuitpython-range-finder-library"]
+	path = frozen/circuitpython-range-finder-library
+	url = https://github.com/buildwithpiper/circuitpython-range-finder-library
+[submodule "frozen/circuitpython-motor-module-library"]
+	path = frozen/circuitpython-motor-module-library
+	url = https://github.com/buildwithpiper/circuitpython-motor-module-library
+[submodule "frozen/circuitpython-lightshow-library"]
+	path = frozen/circuitpython-lightshow-library
+	url = https://github.com/buildwithpiper/circuitpython-lightshow-library
+[submodule "frozen/circuitpython-heart-sensor-library"]
+	path = frozen/circuitpython-heart-sensor-library
+	url = https://github.com/buildwithpiper/circuitpython-heart-sensor-library
+[submodule "frozen/circuitpython-piper-make-library"]
+	path = frozen/circuitpython-piper-make-library
+	url = https://github.com/buildwithpiper/circuitpython-piper-make-library
+[submodule "frozen/Adafruit_CircuitPython_PixelBuf"]
+	path = frozen/Adafruit_CircuitPython_PixelBuf
+	url = https://github.com/adafruit/Adafruit_CircuitPython_PixelBuf
+[submodule "frozen/circuitpython-radio-module-library"]
+	path = frozen/circuitpython-radio-module-library
+	url = https://github.com/buildwithpiper/circuitpython-radio-module-library

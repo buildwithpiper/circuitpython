@@ -101,5 +101,8 @@ FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-lightshow-library
 # https://github.com/buildwithpiper/circuitpython-heart-sensor-library.git
 FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-heart-sensor-library
 
+# https://github.com/buildwithpiper/circuitpython-radio-module-library.git
+FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-radio-module-library
+
 # https://github.com/buildwithpiper/circuitpython-piper-make-library.git
 FROZEN_MPY_DIRS += $(TOP)/frozen/circuitpython-piper-make-library

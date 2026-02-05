@@ -133,8 +133,8 @@ void lightshow_tick(void) {
     gpio_set_dir(spi_cs, GPIO_OUT);
     gpio_put(spi_cs, 1);
 
-    // Initialize SPI port at 2.5 MHz (Previously 8 MHz - too fast for many modules)
-    spi_init(spi, 2500 * 1000);  //spi_init(spi, 8000 * 1000);
+    // Initialize SPI port at 3.25 MHz (Previously 8 MHz - too fast for older modules)
+    spi_init(spi, 3250 * 1000);  //spi_init(spi, 8000 * 1000);
 
     // Set SPI format
     spi_set_format(spi0,    // SPI instance
